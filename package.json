@@ -1,0 +1,48 @@
+{
+  "name": "babel-plugin-import-opt",
+  "version": "1.0.0",
+  "description": "import element-ui、antd 时缩小引用范围，优化打包",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf lib && ./node_modules/.bin/babel src --out-dir lib --ignore __tests__",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "newpublish": "npm publish --registry http://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/careteenL/babel-plugin-import-opt.git"
+  },
+  "author": "ketingwang <15074806497@163.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^0.21.0",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "coveralls": "^2.11.6",
+    "eslint": "^4.3.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "standard": "^10.0.2"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ],
+    "plugins": [
+      "add-module-exports"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/careteenL/babel-plugin-import-opt/issues"
+  },
+  "homepage": "https://github.com/careteenL/babel-plugin-import-opt#readme"
+}
