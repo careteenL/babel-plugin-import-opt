@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-import-opt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "import element-ui、antd 时缩小引用范围，优化打包",
   "main": "lib/index.js",
   "scripts": {

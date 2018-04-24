@@ -9,6 +9,6 @@ export const config = [
     'libraryName': 'element-ui',
     'libraryPath': 'element-ui/lib/${name}.js',
     'namePolicy': 'dash',
-    'cssPath': ['element-ui/lib/theme-default/base.css', 'element-ui/lib/theme-default/${name}.css']
+    'cssPath': ['element-ui/lib/theme-chalk/base.css', 'element-ui/lib/theme-chalk/${name}.css']
   }
 ]
