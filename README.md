@@ -1,33 +1,54 @@
-# babel-plugin-import-opt
+# [babel-plugin-import-opt](https://github.com/careteenL/babel-plugin-import-opt)
+[![](https://img.shields.io/badge/Powered%20by-babel-plugin-import-opt-brightgreen.svg)](https://github.com/careteenL/babel-plugin-import-opt)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/careteenL/babel-plugin-import-opt/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/careteenL/babel-plugin-import-opt.svg?branch=master)](https://travis-ci.org/careteenL/babel-plugin-import-opt)
+[![npm](https://img.shields.io/badge/npm-0.1.3-orange.svg)](https://www.npmjs.com/package/@careteen/babel-plugin-import-opt)
+[![NPM downloads](http://img.shields.io/npm/dm/@careteen/babel-plugin-import-opt.svg?style=flat-square)](http://www.npmtrends.com/@careteen/babel-plugin-import-opt)
+
 import element-ui、antd 时缩小引用范围，优化打包
 
-```javascript
-import {Button} from 'antd';
+使用前用法：
+```js
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 ```
 
-after fix:
-
-```javascript
-import {Button} from 'antd/lib/button';
-import 'antd/lib/button/style'
+使用后用法：
+```js
+import Button from 'element-ui/lib/button'
+import 'element-ui/lib/theme-chalk/button.css'
+const components = [
+  Button
+]
+components.forEach(component => {
+  Vue.component(component.name, component)
+})
 ```
+一般项目中并不会使用到`element-ui`提供的所有组件，按需引入后打包体积可以大幅度减少。
 
-## Usage
+## 快速使用
 
-```bash
-npm install babel-plugin-import-opt -D
+```shell
+npm i babel-plugin-import-opt -D
 ```
 
 在.babelrc里进行配置
 
 .babelrc
-```javascript
+```json
 {
   "presets": [
-    ["es2015", { "modules": false }], "react"
+    ["env", {
+      "modules": false,
+      "targets": {
+        "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+      }
+    }],
+    "stage-2"
   ],
-  "plugins": ["import-opt"]
+  "plugins": ["transform-runtime", "import-opt"]
 }
+
 ```
 目前支持element-ui、antd
 
@@ -56,6 +77,14 @@ npm install babel-plugin-import-opt -D
 }
 ```
 cssPath可以是字符或数组
+
+## issue模板
+
+- [Issue Template](./ISSUETEMPLATE.md)
+
+## 更新日志
+
+- [Changelog](./CHANGELOG.md)
 
 ## Quote
 
