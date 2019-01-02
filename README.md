@@ -5,7 +5,7 @@
 [![npm](https://img.shields.io/badge/npm-0.1.3-orange.svg)](https://www.npmjs.com/package/babel-plugin-import-opt)
 [![NPM downloads](http://img.shields.io/npm/dm/babel-plugin-import-opt.svg?style=flat-square)](http://www.npmtrends.com/babel-plugin-import-opt)
 
-import element-ui、antd 时缩小引用范围，优化打包
+一般项目中并不会使用到`element-ui`、`antd`的所有组件，按需引入后可以大幅度减少打包体积。
 
 使用前用法：
 ```js
@@ -15,6 +15,8 @@ import 'element-ui/lib/theme-chalk/index.css'
 
 使用后用法：
 ```js
+import { Button } from 'element-ui'
+// 相当于
 import Button from 'element-ui/lib/button'
 import 'element-ui/lib/theme-chalk/button.css'
 const components = [
@@ -24,7 +26,6 @@ components.forEach(component => {
   Vue.component(component.name, component)
 })
 ```
-一般项目中并不会使用到`element-ui`提供的所有组件，按需引入后打包体积可以大幅度减少。
 
 ## 快速使用
 
