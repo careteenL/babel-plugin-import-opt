@@ -16,7 +16,12 @@ import 'element-ui/lib/theme-chalk/index.css'
 使用后用法：
 ```js
 import { Button } from 'element-ui'
-// 相当于
+```
+
+本插件会按需引入对应组件和样式依赖，并进行组件全局注册。
+
+相当于下面写法。
+```js
 import Button from 'element-ui/lib/button'
 import 'element-ui/lib/theme-chalk/button.css'
 const components = [
