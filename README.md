@@ -2,8 +2,8 @@
 [![](https://img.shields.io/badge/Powered%20by-babel-plugin-import-opt-brightgreen.svg)](https://github.com/careteenL/babel-plugin-import-opt)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/careteenL/babel-plugin-import-opt/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/careteenL/babel-plugin-import-opt.svg?branch=master)](https://travis-ci.org/careteenL/babel-plugin-import-opt)
-[![npm](https://img.shields.io/badge/npm-0.1.3-orange.svg)](https://www.npmjs.com/package/@careteen/babel-plugin-import-opt)
-[![NPM downloads](http://img.shields.io/npm/dm/@careteen/babel-plugin-import-opt.svg?style=flat-square)](http://www.npmtrends.com/@careteen/babel-plugin-import-opt)
+[![npm](https://img.shields.io/badge/npm-0.1.3-orange.svg)](https://www.npmjs.com/package/babel-plugin-import-opt)
+[![NPM downloads](http://img.shields.io/npm/dm/babel-plugin-import-opt.svg?style=flat-square)](http://www.npmtrends.com/babel-plugin-import-opt)
 
 import element-ui、antd 时缩小引用范围，优化打包
 
